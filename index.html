@@ -364,7 +364,7 @@
 </footer>
 
 <!-- Contenedor oculto donde se insertará el reproductor de música -->
-<div id="yt-player-box" style="position:fixed;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none"></div>
+<div id="yt-player-box" style="position:absolute;left:-9999px;top:-9999px;width:250px;height:141px;pointer-events:none"></div>
 
 <!-- RSVP MODAL -->
 <div class="modal" id="rsvpModal" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
@@ -441,8 +441,8 @@
     musicStarted = true;
     const box = document.getElementById('yt-player-box');
     const iframe = document.createElement('iframe');
-    iframe.width = '1';
-    iframe.height = '1';
+    iframe.width = '250';
+    iframe.height = '141';
     iframe.style.border = '0';
     iframe.allow = 'autoplay; encrypted-media';
     iframe.title = 'Música de fondo';
