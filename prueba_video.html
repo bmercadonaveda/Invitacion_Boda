@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Prueba de video</title>
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:40px">
+  <h1>Prueba de audio</h1>
+  <p>Si escuchas algo al hacer clic aquí, el mecanismo funciona bien
+     y el problema era específico de la canción anterior.</p>
+  <button onclick="startTest()" style="padding:14px 24px;font-size:16px;cursor:pointer">
+    Probar sonido
+  </button>
+  <div id="box" style="width:1px;height:1px;overflow:hidden;position:fixed"></div>
+
+  <script>
+    function startTest() {
+      const box = document.getElementById('box');
+      const iframe = document.createElement('iframe');
+      iframe.width = '1';
+      iframe.height = '1';
+      iframe.allow = 'autoplay; encrypted-media';
+      iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0';
+      box.appendChild(iframe);
+    }
+  </script>
+</body>
+</html>
